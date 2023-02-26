@@ -3,7 +3,7 @@ import List from "./List"
 import ShowMessage from "./ShowMessage"
 
 function App() {
-  const [newGrocery, setNewGrocery] = useState<String>("")
+  const [newGrocery, setNewGrocery] = useState<string>("")
   const [groceries, setGroceries] = useState<any>([])
   const [showMessage, setShowMessage] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
@@ -44,7 +44,7 @@ function App() {
   }, [showMessage])
 
   function deleteItem(index: number) {
-    setGroceries(groceries.filter((item, idx) => idx !== index))
+    setGroceries(groceries.filter((item: any, idx: number) => idx !== index))
     setShowMessage(true)
     setMessageToShow("Item Deleted Successfully")
   }
